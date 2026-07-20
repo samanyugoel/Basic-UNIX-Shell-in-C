@@ -2,7 +2,7 @@
 
 ## Overview
 
-A custom-built shell created in C as a learning project which demonstrates dynamic memory allocation, memory hygiene, error and signal handling, tokenization and string parsing.
+A custom-built shell created in C as a learning project which demonstrates dynamic memory allocation, memory hygiene, piping, error and signal handling, tokenization and string parsing.
 
 ### Features
 
@@ -21,6 +21,7 @@ A custom-built shell created in C as a learning project which demonstrates dynam
 
 * **Tokenization and String Parsing** - User arguments are tokenized parsed using `getword()` function.
 
+* **Pipe (`|`)** - Connects two distinct commands using UNIX pipes. Safely reaps child processes using targeted `waitpid()` calls. 
 
 ### The Files
 
@@ -50,4 +51,4 @@ Make sure you have `gcc`, `make` and `valgrind` installed on your Linux environm
 
 ## Lesson Learned
 
-The developing of this shell has provided a deep insight on how the UNIX shell actually functions, majorly the functionality of `fork()` and `exec()` commands. This also allowed me to understand the drawbacks and advantages of dynamic memory allocation as well as securely applying it. 
+The developing of this shell has provided a deep insight on how the UNIX shell actually functions, majorly the functionality of `fork()`,`pipe()`, `dup2()` and `exec()` commands. This also allowed me to understand the drawbacks and advantages of dynamic memory allocation as well as securely applying it. 
